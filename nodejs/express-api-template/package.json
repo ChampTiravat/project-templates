@@ -1,0 +1,39 @@
+{
+  "name": "express-api-template",
+  "version": "1.0.0",
+  "description": "backend api for nodejs project",
+  "main": "./dist/server.js",
+  "private": true,
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
+  },
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "start": "NODE_ENV=production node ./src/server",
+    "test": "NODE_ENV=production jest --coverage",
+    "test:clean": "NODE_ENV=production rm -rf node_modules; npm i; jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.45.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.2",
+    "mongoose-paginate-v2": "^1.4.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "validator": "^13.7.0"
+  }
+}
